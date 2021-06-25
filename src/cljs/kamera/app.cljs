@@ -1,4 +1,4 @@
-(ns ^:figwheel-hooks kamera.app
+(ns kamera.app
   (:require [kamera.images :refer [image]]
             [kamera.graphs :refer [log-gauge]]
             [reagent.core :as reagent]
@@ -200,9 +200,9 @@
   (load-results!)
   (mount-app))
 
-(defn ^:after-load on-figwheel-reload []
-  (load-results!)
-  (mount-app))
+;; (defn ^:after-load on-figwheel-reload []
+;;   (load-results!)
+;;   (mount-app))
 
 (.addEventListener js/document "DOMContentLoaded" init)
 
